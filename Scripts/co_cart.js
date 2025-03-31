@@ -35,8 +35,9 @@ window.addEventListener("load", function() {
 
    //Event handler for the web form
    cart.elements.modelQty.onchange = calcCart;
-
-   for (i=0; i < shippingOptions.length; i++) {
+   
+   var shippingOptions = document.querySelectorAll('input[name="shipping"]');
+   for (var i=0; i < shippingOptions.length; i++) {
       shippingOptions[i].onclick = calcCart;
    }
 });
